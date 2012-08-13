@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load avatar_tags %}
+
+<section id="perfilbtn">
+	<ul id="css3menu" class="topmenu" style="position: relative;">
+		<li class="topmenu">	
+			<a href="/{{user.username}}/">
+				<span >{{ user.username }} 
+				
+					<img src="{% avatar user.username 25 %}" height="25" align="absmiddle" alt="{{user.username}}" title="{{user.username}}"/></span>
+				
+			</a>
+		<div style="z-index:999;" class="submenu">
+	    	<div style="width:100%; z-index:999" class="column">
+	    		<ul>
+					<li><a title="2.1 Features" href="#">{% trans "cuenta" %}</a></li>
+					<li><a title="2.1 Features" href="#">{% trans "privacidad" %}</a></li>
+					<li><a title="2.1 Features" href="/logout/">{% trans "salir" %}</a></li>
+					<!--<li>
+						<a title="2.2 Installation" href="#"><span>2.2 Installation</span></a>
+						<div class="submenu">
+							<div class="column">
+								<ul>
+									<li><a title="2.2.1Description of Files" href="#">2.2.1Description of Files</a></li>
+									<li><a title="2.2How to Setup" href="#">2.2How to Setup</a></li>
+								</ul>
+							</div>
+						</div>
+
+						</li>-->
+				</ul>
+			</div>
+		</div>
+		</li>
+	</ul>
+</section>

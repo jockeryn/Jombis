@@ -1,0 +1,26 @@
+{% extends "baselimpio.html" %}
+{% load i18n %}
+{% load comments %}
+{% load avatar_tags %}
+{% block title %}{% trans 'Galeria' %}{% endblock %}
+{% block contenido %}       
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/comments.css" type="text/css" media="screen"/>
+       
+			{% get_comment_list for foto.entry 140 as comment_list %}
+
+			<section id="comentList">{% for comment in comment_list %}
+			    <article class="comentario">
+			   		<div class="imgComment">
+			   			<img src="{% avatar comment.user 40 %}" width="40"/>
+			   		</div>
+			   		<div class="userNameLink">
+			   			{{ comment.user }}
+			   		</div>
+			   		<div class="comentText">
+			   			{{ comment.comment }}
+			   		</div>
+			   	</article>
+						{% endfor %}
+			</section>
+			
+{% endblock %}

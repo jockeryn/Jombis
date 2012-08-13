@@ -1,0 +1,382 @@
+{% extends "baselimpio.html" %}
+{% load i18n %}
+{% load comments %}
+{% load avatar_tags %}
+{% block title %}Jombis{% endblock %}
+{% block contenido %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/galeria.css" type="text/css" media="screen"/>
+        <link href="{{ STATIC_URL }}css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+        <script src="{{ STATIC_URL }}js/timeago.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.mousewheel.min.js"></script>
+<script>
+	$(function() {
+		hrefa = window.location.href;
+		$('body').append('<div id="fotoVistaToggle"></div>');
+		//$('#fotoVistaToggle').append('hola');
+		$('.fotoItem').hover(
+			function() {$(this).stop().animate({"opacity": "1"})},
+			function() {$(this).stop().animate({"opacity": "0.8"})}
+		);
+		
+
+
+
+		/*$('#albumList article a').click(function(e){			
+			href = $(this).attr("href");
+			alert(window.location.protocol+'//'+window.location.host+':'+window.location.port+href+' - '+hrefa);
+			history.pushState('', 'New URL: '+href, href);
+			if(href==hrefa){$('#fotoVistaToggle').hide();}
+			$('#fotoVistaToggle').toggle();
+			e.preventDefault(); */
+	})
+
+</script>
+
+         <style>
+.mentions-input-box {
+  position: relative;
+  background: #fff;
+}
+
+.mentions-input-box textarea {
+  width: 100%;
+  display: block;
+  height: 18px;
+  padding: 9px;
+  border: 1px solid #dcdcdc;
+  border-radius:3px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  outline: 0;
+  resize: none;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mentions-input-box .mentions-autocomplete-list {
+  display: none;
+  background: #fff;
+  border: 1px solid #b2b2b2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  margin-top: -2px;
+
+  border-radius:5px;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+}
+
+.mentions-input-box .mentions-autocomplete-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mentions-input-box .mentions-autocomplete-list li {
+  background-color: #fff;
+  padding: 0 5px;
+  margin: 0;
+  width: auto;
+  border-bottom: 1px solid #eee;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:last-child {
+  border-radius:5px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li > img,
+.mentions-input-box .mentions-autocomplete-list li > div.icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-top:5px;
+  margin-right: 5px;
+  -moz-background-origin:3px;
+
+  border-radius:3px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li em {
+  font-weight: bold;
+  font-style: none;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:hover,
+.mentions-input-box .mentions-autocomplete-list li.active {
+  background-color: #f2f2f2;
+}
+
+.mentions-input-box .mentions-autocomplete-list li b {
+  background: #ffff99;
+  font-weight: normal;
+}
+
+.mentions-input-box .mentions {
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  padding: 9px;
+  color: #fff;
+  overflow: hidden;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.mentions-input-box .mentions > div {
+  color: #fff;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.mentions-input-box .mentions > div > strong {
+  font-weight:normal;
+  background: #d8dfea;
+}
+
+.mentions-input-box .mentions > div > strong > span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+        body {
+			background:#212121;
+			}
+			header.fixedtop{
+				z-index:9999;
+			}
+			span.reference{
+				font-family:Arial;
+				position:fixed;
+				right:10px;
+				top:10px;
+				font-size:10px;
+			}
+			span.reference a{
+				color:#fff;
+				text-transform:uppercase;
+				text-decoration:none;
+				text-shadow:1px 1px 1px #000;
+				margin-left:20px;
+			}
+			span.reference a:hover{
+				color:#ddd;
+			}
+			h1.title{
+				position:fixed;
+				top:10px;
+				left:10px;
+				text-indent:-9000px;
+				z-index:2;
+			}
+		</style>
+<script type="text/javascript" src="{{ STATIC_URL }}js/postComment.js"></script>
+<script type="text/javascript">
+			var idA = {{ album.id }};
+			var user = "{{ user }}";
+			var avatar = "{% avatar user 32 %}";
+		</script>
+<script type="text/javascript">
+			$(window).load(function() {			
+				loadComment('album', idA);
+				resizeComentList();
+				
+				
+		$.timeago.settings.strings = {
+   prefixAgo: "hace",
+   prefixFromNow: "dentro de",
+   suffixAgo: "",
+   suffixFromNow: "",
+   seconds: "unos segundos",
+   minute: "un minuto",
+   minutes: "%d minutos",
+   hour: "una hora",
+   hours: "%d horas",
+   day: "un día",
+   days: "%d días",
+   month: "un mes",
+   months: "%d meses",
+   year: "un año",
+   years: "%d años"
+};
+            
+            $('#fp_gallery').css('line-height', ($(window).height()-160) +'px');	
+    
+    		$("#id_comment").keypress(function(event) {
+    			if ( event.which == 13 ) {
+    				event.preventDefault();
+    				postComment(idA);
+    		}
+    		})
+    		
+})				
+        </script>
+   
+<section class="fotoList">
+	<div class="breadcrumbs" style="text-align:left" >
+   	 	<a href="/">{% trans 'Home' %}</a> &rsaquo;
+    	<a href="/{{ userv }}/">{{ userv }}</a> &rsaquo;
+    	<a href="/fotos/">{% trans 'albumes' %}</a>
+	</div>
+	{% if fotos %}
+	<article>{% for a in fotos %}
+			
+			<a href="/fotos/album/{{ album.id }}/{{ a.id }}/" class="thumbgal" title="{{ album.nombre }}">
+						<img src="{{MEDIA_URL}}{{ a.thumb }}" width="{{ a.width }}" class="fotoItem"/>	
+					</a>
+			
+			
+		{% endfor %}
+	</article>
+{% else %}
+	{% if user.username == userv.username %}
+		{% trans 'No tienes albumes aun, porfavor crea uno' %}<br/><a href="/fotos/addAlbum/">Crear una</a>
+	{% else %}
+ 		{% blocktrans %}{{ userv }} no tiene fotos todavia ¡dile que suba!. {% endblocktrans %}
+	{% endif %}
+{% endif %}
+</section>
+
+<div id="comentcontent">
+			
+	<div id="mcs_container">
+		<div class="customScrollBox">
+			<div class="container">
+    			<div class="content">	
+			 		<section id="comentList"></section>
+				</div>
+			</div>
+		<div class="dragger_container">
+    		<div class="dragger"></div>
+		</div>
+	</div>
+    	<a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a>
+</div>
+ <section id="addComent">
+	<article>
+		{% get_comment_form for fotos.album album.id as form %}
+			{{ user.name }}
+			<section id="comentArea">
+				<article class="comentario">
+					<span id="cmntFrm" class="comentText">
+    				{% csrf_token %}
+    				<input type="hidden" name="name" id="id_name" value="{{ user.username }}">
+    				<input type="hidden" id="id_email" name="email" value="{{ user.email }}">
+    				<input type="hidden" id="id_url" name="url" value="">
+    				<input type="hidden" id="id_honeypot" name="honeypot">
+   					{{ form.content_type }}
+    				{{ form.object_pk }}
+    				{{ form.timestamp }}
+    				{{ form.security_hash }}
+					</span>
+					<textarea name="comment" class="mention" placeholder="{% trans 'Escribe un comentario...'%}"  cols="20" rows="1" id="id_comment"></textarea>
+			   	</article>				
+			</section>	
+</article>
+
+   </section>
+   <script src="{{ STATIC_URL }}js/underscore-min.js" type="text/javascript"></script>
+  <script src='{{ STATIC_URL }}js/jquery.events.input.js' type='text/javascript'></script>
+  <script src='{{ STATIC_URL }}js/jquery.elastic.js' type='text/javascript'></script>
+  <script src='{{ STATIC_URL }}js/jquery.mentionsInput.js' type='text/javascript'></script>
+
+  <script type="text/javascript">
+    
+	$('textarea.mention').mentionsInput({
+  	onDataRequest:function (mode, query, callback) {
+    var data = [
+      { id:1, name:'Kenneth Auchenberg', 'avatar':'http://cdn0.4dots.com/i/customavatars/avatar7112_1.gif', 'type':'contact' },
+      { id:2, name:'Jon Froda', 'avatar':'http://cdn0.4dots.com/i/customavatars/avatar7112_1.gif', 'type':'contact' },
+      { id:3, name:'Anders Pollas', 'avatar':'http://cdn0.4dots.com/i/customavatars/avatar7112_1.gif', 'type':'contact' },
+      { id:4, name:'Kasper Hulthin', 'avatar':'http://cdn0.4dots.com/i/customavatars/avatar7112_1.gif', 'type':'contact' },
+      { id:5, name:'Andreas Haugstrup', 'avatar':'http://cdn0.4dots.com/i/customavatars/avatar7112_1.gif', 'type':'contact' },
+      { id:6, name:'Pete Lacey', 'avatar':'http://cdn0.4dots.com/i/customavatars/avatar7112_1.gif', 'type':'contact' }
+    ];
+
+    data = _.filter(data, function(item) { return item.name.toLowerCase().indexOf(query.toLowerCase()) > -1 });
+
+    callback.call(this, data);
+  }
+});
+</script>  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27763738-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>		
+<script>
+$(window).load(function() {
+	mCustomScrollbars();
+});
+</script>
+<noscript>
+  <style type="text/css">
+    #mcs_container .customScrollBox{overflow:auto;}
+    #mcs_container .dragger_container{display:none;}
+  </style>
+</noscript>
+
+<script>
+
+
+function mCustomScrollbars(){
+  /* 
+  malihu custom scrollbar function parameters: 
+  1) scroll type (values: "vertical" or "horizontal")
+  2) scroll easing amount (0 for no easing) 
+  3) scroll easing type 
+  4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+  5) scrollbar height/width adjustment (values: "auto" or "fixed")
+  6) mouse-wheel support (values: "yes" or "no")
+  7) scrolling via buttons support (values: "yes" or "no")
+  8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+  */
+  $("#mcs_container").mCustomScrollbar("vertical",300,"easeOutCirc",1.05,"auto","yes","yes",15); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+  $("#"+id+" .customScrollBox .content").load(file,function(){
+    mCustomScrollbars();
+  });
+}
+</script>
+<script src="{{ STATIC_URL }}js/jquery.mCustomScrollbar.js"></script>
+{% endblock %}
+
+

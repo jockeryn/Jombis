@@ -1,0 +1,16 @@
+{% load i18n %}
+<header class="headerportada">
+	<div class="logomain"></div><div class="divlogin">
+    	<div>
+        	<form id="frmlogin" action="/login/" method="post">{% csrf_token %}
+            	<fieldset>
+           	    <div>
+                    	<input type="text" autofocus = "autofocus" required="required" name="username" class="frmlogin" placeholder='{% trans "usuario o email" %}'  />
+                    <input type="password" required="required" name="password" class="frmlogin" placeholder="{% trans 'contrasena' %}"  />
+                    <input type="submit" value="{% trans 'iniciar sesion' %}" class="frmloginsub" />
+                  </div> 
+               </fieldset>
+             </form>
+        </div>
+    </div>
+</header>

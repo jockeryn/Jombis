@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Jombis' %}{% endblock %}
+{% block content %}
+{% include "includes/headerportada.html" %}<hr class="hrindex">
+<section class="secindexleft">
+	<article><h3 class="h3portada">{% trans 'la herramienta social que nececitas' %}</h3><h2 class="h2portada">{% trans 'conoce' %} • {% trans 'aprende' %} • {% trans 'comparte' %} • {% trans 'produce' %}</h2></article>
+    <article class="fotosPortada">
+    	<div class="imgp"><img src="{{ STATIC_URL }}imagenes/cuadroportada1.gif" /><div class="desccuadroportada">{% trans 'desccuadrounoportada' %}</div></div>
+        <div class="imgp"><img src="{{ STATIC_URL }}imagenes/cuadroportada2.gif" /><div class="desccuadroportada">{% trans 'desccuadrodosportada' %}</div></div>
+    </article>
+</section>
+{% include "includes/frmsingup.html" %}
+
+{% endblock content %}
+
+	

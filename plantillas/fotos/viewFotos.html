@@ -1,0 +1,44 @@
+{% extends "baselanding.html" %}
+{% load i18n %}
+{% block title %}Jombis{% endblock %}
+{% block leftside %}
+<section id="perfilInfo">
+
+	<article id="imgMain"></article>
+	<article id="infoPerfil"></article>
+    <article id="f5s"></article>
+</section>
+<section id="albumList">{% if album %}
+<h1 class="floatleft">{% blocktrans %} Albumes de {{ userv }} {% endblocktrans %}</h1>
+<span class="floatright">
+	<a id="addFriend" href="addAlbum/" role="button" class="addFriend gBtn">
+        <i class="mrs img jbIcon-addFriend"></i>
+        <span class="gBtnText">{% trans 'Agregar albumes' %}</span>
+    </a>
+</span>
+	<article class="clearboth albumlist">{% for a in album %}
+			
+			<a href="/fotos/album/{{ a.id }}" class="thumbgal">
+						<img src="{{MEDIA_URL}}{{ a.get_cover_photo }}" class="albumItem"/>			
+						<div class="descThumb">{{ a.nombre }}</div>
+						<div class="subDescThumb">
+							{{ a.contarFotos }} 
+							{% trans 'foto' %}{{ a.contarFotos|pluralize }}
+						</div>
+					</a>
+			
+			
+		{% endfor %}
+	</article>
+{% else %}
+	{% if user.username == userv.username %}
+		{% trans 'No tienes albumes aun, porfavor crea uno' %}<br/><a href="/fotos/addAlbum/">Crear una</a>
+	{% else %}
+ 		{% blocktrans %}{{ userv }} no tiene fotos todavia ¡dile que suba!. {% endblocktrans %}<a href="/fotos/addAlbum/">Crear una</a>
+	{% endif %}
+{% endif %}</section>
+{% endblock %}
+{%block rightside %}
+	{% include 'includes/perfilPanel.html' %}
+{% endblock %}
+

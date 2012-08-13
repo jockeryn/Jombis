@@ -1,0 +1,20 @@
+{% extends "baselimpio.html" %}
+{% load i18n %}
+{% load comments %}
+{% load avatar_tags %}
+{% block title %}{% trans 'Test ajax' %}{% endblock %}
+{% block contenido %}       
+        <script type="text/javascript">
+            $(document).ready(function(){
+            	var idF = {{ foto.id }};
+            	$.post('/comments/load/140/', { 
+    					idf: "4" }, 
+    					function(data) {
+        				alert(data);
+    				})
+    				.success(function() { alert("second success"); })
+    				.error(function() { alert('error!!! jiote'); 
+    			});
+			})
+        </script>
+{% endblock %}

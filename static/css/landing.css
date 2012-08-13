@@ -1,0 +1,726 @@
+body{
+   font-family: "Trebuchet MS","Myriad Pro", Helvetica, sans-serif;
+   margin: 0 auto 0 auto; 
+   padding:0; 
+   border:0; 
+   outline:none;
+   height:100%;
+   direction: ltr;
+   unicode-bidi: embed;
+   }
+header
+   {
+	   background:transparent url('../imagenes/bgheader.gif') repeat-x 0 0;
+	   height: 40px;
+	   width:100%;
+   }
+.fixedtop
+{
+	position: fixed !important;
+}
+header.fixedtop{
+   left: 0;
+   top: 0;
+	position: fixed;
+   z-index:999;
+}
+#headerbar
+{
+	margin: 0 auto;
+    width: 996px;
+	height: 39px;
+}
+.clrfx after
+{
+	clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.logoin
+{
+	float:left;
+	margin:5px 20px 0 5px;
+}
+.logoin
+{
+	background-image:url('../imagenes/logoin.png');
+	background-repeat:no-repeat;
+	background-position:0 0;
+	height:31px; width:90px;
+}
+.logoin:hover
+{
+	background-image:url('../imagenes/logoin.png');
+	background-repeat:no-repeat;
+	background-position:0px -31px;
+	height:31px; width:90px;
+}
+#cuerpoPrincipal
+{
+	margin: 40px auto 0 auto;
+
+	width:996px;
+	
+}
+#searchbar
+{
+	float:left;
+}
+#searchbar input::-webkit-input-placeholder { color:#666666; font-weight:100; }   
+#searchbar input:-moz-placeholder { color:#666666; font-weight:100; }
+#searchbar input
+{
+   width: 300px; 
+   height: 25px; 
+   padding: 3px 10px 0px 10px; 
+   margin: 5px 0 1px 1px;
+   background: #fff;
+   -moz-box-shadow:inset 1px 1px 2px #000000;
+   -webkit-box-shadow:inset 1px 1px 2px #000000;
+   background: -moz-linear-gradient(top, #0000 0%, #000 20%); /* firefox */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(20%,#000)); /* webkit */
+   -moz-border-radius: 5px 0 0 5px; 
+   -webkit-border-radius: 5px 0 0 5px;
+   font-family: sans-serif; 
+   font-size: 14px;
+   color: #333;
+   font-weight:bold;
+   font-family: "Trebuchet MS","Myriad Pro", Helvetica, sans-serif;;
+}
+#searchbar button
+{
+	height:28px;
+	width:25px;
+	margin:-6px 0 0 -6px;
+	background:#FFF url('../imagenes/tmb4icons.png') no-repeat 5px 8px;
+	border:0;
+	top:-5px;
+	vertical-align: middle;
+	-moz-box-shadow:inset -2px 1px 2px #000000;
+    -webkit-box-shadow:inset -2px 1px 2px #000000;
+	-moz-border-radius:0 5px 5px 0; 
+    -webkit-border-radius: 5px 0 0 5px;
+	cursor:pointer;
+}
+#searchfrm
+{
+	vertical-align:middle;
+}
+#mainnav
+{
+	float:left;	
+}
+#mainnav ul
+{
+	list-style:none;
+	margin: 0;
+	
+}
+.btnmain
+{
+	color:#E6E6E6;
+	float:left;
+	height:18px;
+	padding:10px;
+}
+.btnmain:hover
+{
+	color:#FFF;
+	 font-weight: normal;
+}
+#perfilbtn
+{
+	float:right;
+	color:#FFF;
+	padding:3px;
+	height:32px;
+}
+#perfilbtn A
+{
+	text-decoration:none;
+	color:#FFF;
+}
+#perfilbtn:hover
+{
+   background-color:#799B02;
+}
+.nickheader
+{
+	 line-height: 29px;
+	 font-size:80%;
+	 padding-right:10px;
+	 float: left;
+}
+.nickheaderimg
+{
+	 float:right;
+	 position:relative;
+	 top:4px;
+}
+.btnmain, nickheader
+{
+	font:13px/1.5 "Trebuchet MS","Myriad Pro", Helvetica, sans-serif;;
+}
+#floatMainLeft
+{
+	float:left;
+  width: 581px;
+}
+#floatMainRight
+{
+	display: inline-block;
+}
+#asMainPerfil
+{
+	background-color:#333333;
+  height:345px;
+}
+.avatarMaImgs
+{
+
+}
+#perfilPanel
+{
+	
+}
+.miniAvatars img
+{
+	width:32px;
+  border-radius:3px;
+  clear:both;
+}
+.littleAvatars img
+{
+		max-width: 88px;
+		margin:5px;
+		border:solid 2px #fff;
+		-moz-border-radius: 5px; 
+   		-webkit-border-radius: 5px;		
+}
+.btnGris  {
+   height: 27px; 
+   padding: 0 15px 0 15px; 
+   margin: 0px auto 10px auto;
+    -moz-border-radius: 5px; 
+   -webkit-border-radius: 5px;
+   -moz-box-shadow: 1px 1px 2px #000;
+   -webkit-box-shadow: 0px 0px 5px #999;
+   background: -moz-linear-gradient(top, #fff 0%, #CFCFCF 100%); /* firefox */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#CFCFCF)); /* webkit */
+   font:18px/1.5 "Trebuchet MS","Myriad Pro", Helvetica, sans-serif;;
+   font-weight:bold;
+   display:inline-block
+   cursor: pointer;
+   
+   }
+.btnGris:hover {
+	
+   -moz-border-radius: 5px; 
+   -webkit-border-radius: 5px;
+   -moz-box-shadow: 0px 0px 5px #fff;
+   -webkit-box-shadow: 1px 1px 5px #fff;
+   background: -moz-linear-gradient(top, #CFCFCF 0%, #fff 100%); /* firefox */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#204c5c), color-stop(100%,#406c7c)); /* webkit */
+}
+.forms
+{
+	width:575px;
+	text-align:center;
+	margin-top:25px;
+}
+.forms  input::-webkit-input-placeholder  {
+   color: #999;  
+   }
+   
+.forms  input:-moz-placeholder {
+   color: #999; 
+   }
+ 
+.forms .input {
+   width: 250px; 
+   height: 30px; 
+   padding: 3px 10px 0px 10px; 
+   margin: 3px;
+   background: #fff;
+   background: -moz-linear-gradient(top, #0000 0%, #000 20%); /* firefox */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(20%,#000)); /* webkit */
+   -moz-border-radius: 5px; 
+   -webkit-border-radius: 5px;
+   border:#CCC solid thin;
+   font-family: sans-serif; 
+   font-size: 14px;
+   color: #333;
+   font-weight:bold;
+   font-family: "Trebuchet MS","Myriad Pro", Helvetica, sans-serif;;
+   }
+ .forms  .textarea::-webkit-input-placeholder  {
+   color: #999;  
+   }
+   
+.forms  .textarea:-moz-placeholder {
+   color: #999; 
+   } 
+ .forms .textarea {
+   width: 250px; 
+   height: 50px; 
+   padding: 3px 10px 0px 10px; 
+   margin: 3px;
+   background: #fff;
+   background: -moz-linear-gradient(top, #0000 0%, #000 20%); /* firefox */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(20%,#000)); /* webkit */
+   -moz-border-radius: 5px; 
+   -webkit-border-radius: 5px;
+   border:#CCC solid thin;
+   font-family: sans-serif; 
+   font-size: 14px;
+   color: #333;
+   font-weight:bold;
+   font-family: "Trebuchet MS","Myriad Pro", Helvetica, sans-serif;;
+   }
+#albumList
+{
+   margin:0;
+   padding:20px;
+   
+   display: inline-block;
+   width:545px;
+   text-align:center;
+}
+.fotoList{
+   margin:35px 50% ;
+   padding:20px;
+   left:-575px;
+   position:absolute;
+   width:750px;
+   text-align:center;
+}
+.albumItem
+{
+   background-color: #FFFFFF;
+   border-right: thin solid #CCCCCC;
+   border-top: 4px double #CCCCCC;
+   border-left: 4px double #CCCCCC;
+   border-bottom: thin solid #CCCCCC;
+   border-radius: 0.3em 0.3em 0.3em 0.3em;
+   height: 120px;
+   padding: 3px;
+   width: 120px;
+   z-index: 2;
+}
+
+.albumItem img
+{
+   width:120px;
+   margin:5px 0 0 -130px;
+   padding:3px;
+   border:solid #ccc thin;
+   border-radius:0.5em;
+   background-color:#fff;
+   height:120px;
+}
+.albumItem:hover
+{
+   border-color:#6B8901;
+   cursor:pointer;
+}
+.fotoItem
+{
+   background-color: #333;
+   border: thin solid #333; 
+   z-index: 2;
+   width:90px;
+   height:90px;
+   opacity:0.8;
+}
+
+
+.fotoItem:hover
+{
+   border-color:#6B8901;
+   cursor:pointer;
+}
+.thumbgal
+{
+   float: left;
+   text-decoration: none;
+   height: 94px;
+   text-align:center;
+   
+}
+.multiBordeGaleria
+{
+   width:120px;
+   margin:3px 0 0 3px;
+   padding:3px;
+   border:solid #ccc thin;
+   border-radius:1em;
+   background-color:#fff;
+   height:120px;
+   display: inline-block;
+}
+
+.descThumb
+{
+   font-size:80%;
+   color: #6B8901;
+   font:12px/1.5 Arial, Helvetica, Tahoma, sans-serif;
+   font-weight:bold;
+   text-align:left;
+   margin:-5px 0 0 8px;
+   padding:0;
+}
+.subDescThumb
+{
+   font-size:80%;
+   color:#999;
+   text-align:left;
+   font:12px/1.5 Arial, Helvetica, Tahoma, sans-serif;
+   margin:0 0 0 8px;
+   padding:0;
+}
+.descThumb:hover
+{
+   text-decoration:underline;
+}
+#fotoVistaToggle{
+   width:10%;
+   height:10%;
+   top:0;
+   background-color:blue;
+   position:fixed;
+   display:none;
+}
+.imgComment{
+   float:left;
+}
+.comentario{
+   min-height:45px;
+   border-top: 1px solid #E9E9E9;
+   text-align: left;
+}
+#comentList{
+  color:#000;
+  text-align: left;
+}
+#comentList .imgComment, #comentArea .imgComment{
+  margin:0px;
+  display:inline-block;
+}
+#comentList .userNameLink {
+   color:#607B00;
+   font-size:85%;
+   text-decoration:none;
+   font-weight:bold;
+   text-align:left;
+}
+.userNameLink{
+   color:#607B00;
+   font-size:85%;
+   text-decoration:none;
+   font-weight:bold;
+   text-align:left;
+   width: 200px;
+}
+.comentText{
+   font-size:75%;
+   color: #333;
+}
+#comentList hr{
+   border-color:#eee;
+}
+.timeago{
+   color:#999;
+   font-size:75%;
+}
+#id_comment{
+   border:solid thin #607B00;
+   margin:5px 0;
+}
+.mentions-input-box {
+  position: relative;
+  background: #fff;
+}
+
+.mentions-input-box textarea {
+  width: 95%;
+  display: block;
+  height: 18px;
+  padding: 9px;
+  border: 1px solid #dcdcdc;
+  border-radius:3px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  outline: 0;
+  resize: none;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mentions-input-box .mentions-autocomplete-list {
+  display: none;
+  background: #fff;
+  border: 1px solid #b2b2b2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  margin-top: -2px;
+
+  border-radius:5px;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+}
+
+.mentions-input-box .mentions-autocomplete-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mentions-input-box .mentions-autocomplete-list li {
+  background-color: #fff;
+  padding: 0 5px;
+  margin: 0;
+  width: auto;
+  border-bottom: 1px solid #eee;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:last-child {
+  border-radius:5px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li > img,
+.mentions-input-box .mentions-autocomplete-list li > div.icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-top:5px;
+  margin-right: 5px;
+  -moz-background-origin:3px;
+
+  border-radius:3px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li em {
+  font-weight: bold;
+  font-style: none;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:hover,
+.mentions-input-box .mentions-autocomplete-list li.active {
+  background-color: #f2f2f2;
+}
+
+.mentions-input-box .mentions-autocomplete-list li b {
+  background: #ffff99;
+  font-weight: normal;
+}
+
+.mentions-input-box .mentions {
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  padding: 9px;
+  color: #fff;
+  overflow: hidden;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.mentions-input-box .mentions > div {
+  color: #fff;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.mentions-input-box .mentions > div > strong {
+  font-weight:normal;
+  background: #d8dfea;
+}
+
+.mentions-input-box .mentions > div > strong > span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+
+.clear{clear:both;}
+
+.breadcrumbs a{
+  color:#fff;
+  text-decoration:none;
+}
+.breadcrumbs a:hover{
+  color:#FDFFF4;
+  text-decoration:underline;
+}
+ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+ 
+.menu_class {
+    border:1px solid #1c1c1c;
+}
+.the_menu {
+    display:none;
+    width:300px;
+    border: 1px solid #1c1c1c;
+    z-index:9999;
+    position: absolute;
+}
+.the_menu li {
+    background-color: #302f2f;
+}
+ 
+.the_menu li a {
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:10px;
+    display:block;
+}
+ 
+.the_menu li a:hover {
+    padding:10px;
+    font-weight:bold;
+    color: #F00880;
+}
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+  overflow: hidden;
+  position: relative;
+}
+
+.jspPane
+{
+  position: absolute;
+}
+
+.jspVerticalBar
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: red;
+}
+
+.jspHorizontalBar
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: red;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+  margin: 0;
+  padding: 0;
+}
+
+.jspCap
+{
+  display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+  float: left;
+}
+
+.jspTrack
+{
+  background: #dde;
+  position: relative;
+}
+
+.jspDrag
+{
+  background: #bbd;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+  float: left;
+  height: 100%;
+}
+
+.jspArrow
+{
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+  cursor: default;
+  background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+  height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+  outline: none;
+}
+
+.jspCorner
+{
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+  margin: 0 -3px 0 0;
+}

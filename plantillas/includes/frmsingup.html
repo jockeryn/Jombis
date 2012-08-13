@@ -1,0 +1,24 @@
+{% load i18n %}
+<section class="secindexright">
+	<div>
+        	<form id="frmsingup" action="/ruser/" method="post">{% csrf_token %}
+            	<fieldset >
+           	    <div>
+       	    <input type="text" id="id_username" required="required" name="username" class="inpsingup" placeholder="{% trans 'Nombre de usuario' %}"  /><br/>
+                        <input type="text" id="id_first_name" required="required" name="first_name" class="inpsingup" placeholder="{% trans 'Nombre' %}"  /><br/>
+                        <input type="text" id="id_last_name"  required="required" name="last_name" class="inpsingup" placeholder="{% trans 'Apellido' %}"  /><br/>
+                        <input type="email"  id="id_email" required="required" name="email" class="inpsingup" placeholder="{% trans 'correo electronico' %}"  /><br/>
+                    <input type="password" id="id_password" required="required" name="password" class="inpsingup" placeholder="{% trans 'contrasena' %}"  /><br/>
+                    <select class="frmsingupsel" name="genero" id="id_genero" required="required" >
+                    <option value="">{% trans 'Selecciona tu sexo' %}</option>
+                      <option value="M">{% trans 'Masculino' %}</option>
+                      <option value="F">{% trans 'Femenino' %}</option>
+                    </select><br/>
+                  <input type="submit" value="{% trans 'Registrarme' %}" class="frmsingupsub" id="btnsingup" />
+                  </div> 
+                	
+                 </fieldset>
+             </form>
+             <div id="result" class="errorlog"></div><div class="loader">cargando . . .</div>
+        </div>
+</section>

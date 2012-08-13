@@ -1,0 +1,25 @@
+{% extends "baselanding.html" %}
+{% load i18n %}
+{% block title %}Jombis{% endblock %}
+{% block leftside %}
+<section id="perfilInfo">
+
+	<article id="imgMain"></article>
+	<article id="infoPerfil"></article>
+    <article id="f5s"></article>
+</section>
+{% if form.usuario %}
+<form action="." method="post" enctype="multipart/form-data" class="forms">{% csrf_token %}
+	{{ form.errors }}
+    	<input id="id_nombre" required="" class="input" type="text" maxlength="128" name="nombre" placeholder="{% trans 'Titulo del album' %}"  ><br/>
+  <textarea id="id_summary"required=""  class="textarea" name="summary" rows="3" placeholder="{% trans 'Descripcion del album' %}"></textarea><br/>
+        <input name="addAlbum" class="gBtn" type="submit" value="{% trans 'Agregar album' %}" />
+</form>
+{% else %}
+	add fotos :D
+{% endif %}
+{% endblock %}
+{%block rightside %}
+	{% include 'includes/perfilPanel.html' %}
+
+{% endblock %}

@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-03 15:22-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/html; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: .\settings.py:37
+msgid "Spanish"
+msgstr ""
+
+#: .\avatar\forms.py:34
+#, python-format
+msgid ""
+"%(ext)s is an invalid file extension. Authorized extensions are : %"
+"(valid_exts_list)s"
+msgstr ""
+
+#: .\avatar\forms.py:38
+#, python-format
+msgid ""
+"Your file is too big (%(size)s), the maximum allowed size is %"
+"(max_valid_size)s"
+msgstr ""
+
+#: .\avatar\forms.py:44
+#, python-format
+msgid ""
+"You already have %(nb_avatars)d avatars, and the maximum allowed is %"
+"(nb_max_avatars)d."
+msgstr ""
+
+#: .\avatar\models.py:75
+#, python-format
+msgid "Avatar for %s"
+msgstr ""
+
+#: .\avatar\views.py:72
+msgid "Successfully uploaded a new avatar."
+msgstr ""
+
+#: .\avatar\views.py:110
+msgid "Successfully updated your avatar."
+msgstr ""
+
+#: .\avatar\views.py:147
+msgid "Successfully deleted the requested avatars."
+msgstr ""
+
+#: .\avatar\templates\avatar\add.html.py:5
+#: .\avatar\templates\avatar\change.html.py:5
+msgid "Your current avatar: "
+msgstr ""
+
+#: .\avatar\templates\avatar\add.html.py:8
+#: .\avatar\templates\avatar\change.html.py:8
+msgid "You haven't uploaded an avatar yet. Please upload one now."
+msgstr ""
+
+#: .\avatar\templates\avatar\add.html.py:12
+#: .\avatar\templates\avatar\change.html.py:19
+msgid "Upload New Image"
+msgstr ""
+
+#: .\avatar\templates\avatar\change.html.py:14
+msgid "Choose new Default"
+msgstr ""
+
+#: .\avatar\templates\avatar\confirm_delete.html.py:5
+msgid "Please select the avatars that you would like to delete."
+msgstr ""
+
+#: .\avatar\templates\avatar\confirm_delete.html.py:8
+#, python-format
+msgid ""
+"You have no avatars to delete. Please <a href=\"%(avatar_change_url)s"
+"\">upload one</a> now."
+msgstr ""
+
+#: .\avatar\templates\avatar\confirm_delete.html.py:14
+msgid "Delete These"
+msgstr ""
+
+#: .\avatar\templatetags\avatar_tags.py:58
+msgid "Default Avatar"
+msgstr ""
+
+#: .\galeria\views.py:17
+msgid "Foto agregada con exito."
+msgstr ""
+
+#: .\plantillas\addAlbum.html.py:14
+msgid "Titulo del album"
+msgstr ""
+
+#: .\plantillas\addAlbum.html.py:15
+msgid "Descripcion del album"
+msgstr ""
+
+#: .\plantillas\addAlbum.html.py:16
+#, fuzzy
+msgid "Agregar album"
+msgstr "Agregar a mis amigos"
+
+#: .\plantillas\loginFrm.html.py:3
+#, fuzzy
+msgid "Ingresa con tus datos a Jombis"
+msgstr "AAAeeee"
+
+#: .\plantillas\loginFrm.html.py:12 .\plantillas\includes\frmsingup.html.py:10
+msgid "correo electronico"
+msgstr "Correo electr&oacute;nico"
+
+#: .\plantillas\loginFrm.html.py:13 .\plantillas\includes\frmsingup.html.py:11
+#: .\plantillas\includes\headerportada.html.py:9
+msgid "contrasena"
+msgstr "Contrase&ntilde;a"
+
+#: .\plantillas\loginFrm.html.py:14
+#: .\plantillas\includes\headerportada.html.py:10
+msgid "iniciar sesion"
+msgstr "Iniciar sesi&oacute;n"
+
+#: .\plantillas\portada.html.py:3
+msgid "Jombis"
+msgstr ""
+
+#: .\plantillas\portada.html.py:7
+msgid "la herramienta social que nececitas"
+msgstr "La herramienta social que nececitas"
+
+#: .\plantillas\portada.html.py:7
+msgid "conoce"
+msgstr "conoce"
+
+#: .\plantillas\portada.html.py:7
+msgid "aprende"
+msgstr "aprende"
+
+#: .\plantillas\portada.html.py:7
+msgid "comparte"
+msgstr "comparte"
+
+#: .\plantillas\portada.html.py:7
+msgid "produce"
+msgstr "produce"
+
+#: .\plantillas\portada.html.py:9
+msgid "desccuadrounoportada"
+msgstr ""
+"<center><strong>Comparte con tus amigos</strong></center> Jombis adem&aacute;"
+"s de ser una red social, tambi&eacute;n es una herramienta para que puedas "
+"hacer de tu visita algo productivo."
+
+#: .\plantillas\portada.html.py:10
+msgid "desccuadrodosportada"
+msgstr ""
+"<center><strong>Aprende</strong></center>Adem&aacute;s de conocer y "
+"compartir tambi&eacute;n tu o tus hijos pueden aprender mientras estan "
+"navegando en Jombis, entra y enterate c&oacute;mo"
+
+#: .\plantillas\fotos\viewFotos.html.py:17
+msgid "No tienes albumes aun, porfavor crea una"
+msgstr ""
+
+#: .\plantillas\fotos\viewFotos.html.py:20
+#, python-format
+msgid "%(userv)s no tiene fotos todavia Â¡dile que suba!. "
+msgstr "%(userv)s "
+
+#: .\plantillas\includes\frmsingup.html.py:7
+msgid "Nombre de usuario"
+msgstr "Usuario o nick"
+
+#: .\plantillas\includes\frmsingup.html.py:8
+msgid "Nombre"
+msgstr "Nombre(s)"
+
+#: .\plantillas\includes\frmsingup.html.py:9
+msgid "Apellido"
+msgstr "Apellido(s)"
+
+#: .\plantillas\includes\frmsingup.html.py:13
+msgid "Selecciona tu sexo"
+msgstr "Selecciona tu sexo"
+
+#: .\plantillas\includes\frmsingup.html.py:14 .\usuarios\models.py:7
+msgid "Masculino"
+msgstr "Masculino"
+
+#: .\plantillas\includes\frmsingup.html.py:15 .\usuarios\models.py:8
+msgid "Femenino"
+msgstr "Femenino"
+
+#: .\plantillas\includes\frmsingup.html.py:17
+msgid "Registrarme"
+msgstr "Registrarme"
+
+#: .\plantillas\includes\header_bar.html.py:7
+msgid "Buscar personas, empresas o productos"
+msgstr "Buscar personas, empresas o productos"
+
+#: .\plantillas\includes\header_bar.html.py:7
+msgid "Buscar"
+msgstr "Buscar"
+
+#: .\plantillas\includes\headerportada.html.py:8
+msgid "usuario o email"
+msgstr "Correo o usuario"
+
+#: .\plantillas\includes\mainnav.html.py:4
+msgid "Inicio"
+msgstr "Inicio"
+
+#: .\plantillas\includes\perfilPanel.html.py:8
+msgid "Agregar a mis amigos"
+msgstr "Agregar a mis amigos"
+
+#: .\plantillas\includes\perfilbtn.html.py:16
+msgid "cuenta"
+msgstr "Mi Cuenta"
+
+#
+#: .\plantillas\includes\perfilbtn.html.py:17
+msgid "privacidad"
+msgstr "Opciones de Privacidad"
+
+#: .\plantillas\includes\perfilbtn.html.py:18
+msgid "salir"
+msgstr "Salir"
+
+#: .\usuarios\views.py:37
+msgid "usuario ya existe singup"
+msgstr "Este usario ya est&aacute; en uso<br/>"
+
+#: .\usuarios\views.py:44
+msgid "correo ya existe singup"
+msgstr "Este correo ya est&aacute; registrado"
+
+#: .\usuarios\views.py:51
+msgid "mensaje bienvenida post registro"
+msgstr ""
+"Te damos la bienvenida a Jombis. es un placer tenerte con nosotros.En email "
+"con una clave de activaci&oacute;n ha sido enviada a %s"
+
+#: .\usuarios\views.py:77
+msgid "esta cuenta no ha sido desactivada."
+msgstr ""
+
+#: .\usuarios\views.py:80
+msgid "Los datos que ingresaste con coinsiden con ninguna cuenta en jombis."
+msgstr ""
+
+#: .\usuarios\views.py:91
+msgid "Bienvenidos a Jombis"
+msgstr "AAAeeee"
+
+#~ msgid "Soltero"
+#~ msgstr "Soltero(a)"
+
+#~ msgid "En Relacion"
+#~ msgstr "En relacion"
+
+#~ msgid "Casado"
+#~ msgstr "Casado(a)"

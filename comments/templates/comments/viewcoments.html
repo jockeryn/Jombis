@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load comments %}
+{% load avatar_tags %}
+{% block contenido %} 
+
+{% if tipo == "foto" %}
+	{% get_comment_list for fotos.foto el as comment_list %}
+{% endif %}
+{% if tipo == "album" %}
+	{% get_comment_list for fotos.album el as comment_list %}
+{% endif %}
+
+<p>        	
+{% for comment in comment_list reversed %}
+<article class="comentario">
+	<table>
+		<tr>
+			<td valign="top">
+			   	<div class="imgComment">
+			   		<a href="/{{comment.user}}"><img src="{% avatar comment.user 32 %}" width="32"/></a>
+			   	</div>
+			</td><td>
+				<div>
+			   		<a href="/{{comment.user}}" class="userNameLink">{{ comment.user }}</a>
+			   		<span class="comentText">
+			   			{{ comment.comment }}
+			   		</span>
+			   		<div>
+			   			<time class="timeago" datetime='{{ comment.submit_date|date:"Y-m-d H:i:s" }}'></time> 
+						<div class="xpresionBtn" id="c{{ comment.id }}">
+							<i class="jbIcon jbIcon-mood" ></i>
+						</div>
+					</div>
+			   	</div>	
+			</td>
+		</tr>
+	</table>
+</article>
+{% endfor %}
+</p>
+			
+	
+  
+					
+{% endblock %}

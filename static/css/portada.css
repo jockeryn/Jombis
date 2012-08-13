@@ -1,0 +1,12 @@
+body{
+   background-image:url('../imagenes/bgbarsindex.png'), url('../imagenes/peoplebgindex.png'), url('../imagenes/bgverdeindex.jpg') ;
+   background-color: #FDFFF4;
+   background-position: 100% 0, 10% 100px, 50% 0;
+   background-repeat: no-repeat, no-repeat, repeat-x;
+   font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
+   width:960px;
+   margin: 0 auto 0 auto; 
+   padding:0; 
+   border:0; 
+   outline:none;
+   }

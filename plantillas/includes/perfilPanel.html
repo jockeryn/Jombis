@@ -1,0 +1,28 @@
+{% load i18n avatar_tags%}
+<aside id="asMainPerfil">
+    <div class="floatleft span2">
+        <div class="marg5">
+        	<a id="addFriend" href="/fotos/{{ userv.username }}/" role="button" class="addFriend gBtn">
+                <i class="mrs img jbIcon jbIcon-foto">
+                    </i>
+                        <span class="gBtnText">{% trans 'fotos' %}</span>
+            </a>
+       </div>
+        </div>
+    	<div class="floatleft span3">
+            <a id="addFriend" href="#" role="button" class="addFriend gBtn">
+                <i class="mrs img  jbIcon jbIcon-addFriend">
+                    </i>
+                        <span class="gBtnText">{% trans 'Agregar a mis amigos' %}</span>
+            </a>
+        	<img src="{% avatar userv.username 245 %}"/>
+            
+            <div class="miniAvatars span3">
+            {% for a in avatars %}
+                <img src="{{ MEDIA_URL }}{{ a.avatar|reempSize:userv.username }}"/>
+            {% endfor %}
+            </div>
+        
+        </div>
+    </div>
+</aside>

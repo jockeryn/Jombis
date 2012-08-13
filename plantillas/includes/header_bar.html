@@ -1,0 +1,14 @@
+{% load i18n %}
+<header class="fixedtop">
+	<div id="headerbar" class="slheader">
+		<a href="/" class="logoin"></a>
+    	<div id="searchbar">
+        	<form id="searchfrm" action="." method="post">
+            	<input type="text" name="searchtask" id="searchtask" placeholder="{% trans 'Buscar personas, empresas o productos' %}" /> <button title="{% trans 'Buscar' %}" type="submit"></button>
+            </form>
+        </div>
+    	{% include 'includes/mainnav.html' %}
+    	{% include 'includes/perfilbtn.html' %}
+    </div>
+</header> 
+

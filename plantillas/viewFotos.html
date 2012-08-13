@@ -1,0 +1,26 @@
+{% extends "baselanding.html" %}
+{% load i18n %}
+{% block title %}Jombis{% endblock %}
+{% block leftside %}
+<section id="perfilInfo">
+
+	<article id="imgMain"></article>
+	<article id="infoPerfil"></article>
+    <article id="f5s"></article>
+</section>
+{% if album %}
+	{% for a in album %}
+		a.nombre
+	{% endfor %}
+{% else %}
+	{% if user.username == userv.username %}
+		{% trans 'No tienes galerias aun, porfavor crea una' %}<br/><a href="/fotos/addAlbum/">Crear una</a>
+	{% else %}
+ 		{% trans 'No hay galerias aun, porfavor dile  que cree una' %}
+	{% endif %}
+{% endif %}
+{% endblock %}
+{%block rightside %}
+	{% include 'includes/perfilPanel.html' %}
+{% endblock %}
+

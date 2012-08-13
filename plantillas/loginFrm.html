@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Ingresa con tus datos a Jombis' %}{% endblock %}
+{% block content %}
+{% include "includes/headerportada.html" %}
+
+<center>
+    	<section class="loginFrm"> {% if message %} <div class="errorlog" style="display:block">{{ message|safe }} </div> {% endif %}
+        	<form id="frmlogin" action="/login/" method="post">{% csrf_token %}
+            	<fieldset>
+           	    <div>
+                    	<input type="email" autofocus = "autofocus" required="required" name="username" class="frmlogin" placeholder='{% trans "correo electronico" %}'  /><br />
+                    <input type="password" required="required" name="password" class="frmlogin" placeholder="{% trans 'contrasena' %}"  /><br />
+                    <input type="submit" value="{% trans 'iniciar sesion' %}" class="frmloginsub" />
+                  </div> 
+               </fieldset>
+             </form>
+        </div>
+</center>
+{% endblock %}
